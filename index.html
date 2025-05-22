@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Салон за красота</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Добавяме favicon -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1940/1940922.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/1940/1940922.png" alt="Beauty Salon Logo" class="logo-img">
+            Beauty Salon
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Начало</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#booking">Резервация</a></li>
+            <li><a href="/admin/login.html" class="admin-link"><i class="fas fa-user-lock"></i> Админ</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero" style="background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80');">
+        <div class="hero-content">
+            <h1>Добре дошли в нашия салон</h1>
+            <p>Професионални услуги за вашата красота</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Нашите Услуги</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="ПриHECKA">
+                </div>
+                <div class="service-icon">✂️</div>
+                <h3>ПриHECKA</h3>
+                <p>Професионално подстригване и стайлинг</p>
+                <button class="book-btn">Резервирай</button>
+            </div>
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Маникюр">
+                </div>
+                <div class="service-icon">💅</div>
+                <h3>Маникюр</h3>
+                <p>Грижа за вашите нокти</p>
+                <button class="book-btn">Резервирай</button>
+            </div>
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1687&q=80" alt="Грим">
+                </div>
+                <div class="service-icon">💄</div>
+                <h3>Грим</h3>
+                <p>Професионален грим за всеки повод</p>
+                <button class="book-btn">Резервирай</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking">
+        <h2>Запазете час</h2>
+        <form id="booking-form" class="booking-form">
+            <div class="form-group">
+                <label for="service">Изберете услуга</label>
+                <select id="service" required>
+                    <option value="">Изберете...</option>
+                    <option value="haircut">ПриHECKA</option>
+                    <option value="nails">Маникюр</option>
+                    <option value="makeup">Грим</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Дата</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Час</label>
+                <input type="time" id="time" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Име</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <button type="submit" class="submit-btn">Запази час</button>
+        </form>
+        <div id="booking-message" class="booking-message"></div>
+    </section>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
