@@ -1,0 +1,210 @@
+:root {
+    --color-primary: #3E2C41;
+    --color-secondary: #D9A5B3;
+    --color-secondary-hover: #BFA2DB;
+    --color-background: #FDF7F0;
+    --color-card: #F3E6E8;
+    --color-white: #FFFFFF;
+    --color-success: #A7D7C5;
+    --color-error: #F67280;
+    --color-warning: #FFDD95;
+    --color-text: #2E2E2E;
+    --color-row-alt: #F9F9F9;
+}
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--color-background);
+}
+
+/* Странична навигация */
+.sidebar {
+    width: 280px;
+    background-color: var(--color-primary);
+    padding: 2rem;
+    color: var(--color-white);
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.sidebar-nav li {
+    margin-bottom: 1rem;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-nav a i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.sidebar-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav li.active a {
+    background-color: var(--color-secondary-hover);
+    color: var(--color-primary);
+}
+
+/* Основно съдържание */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+/* Топ бар */
+.top-bar {
+    background-color: var(--color-card);
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Търсене и филтри */
+.search-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.search-input {
+    position: relative;
+    flex: 1;
+}
+
+.search-input input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.5rem;
+    border: 2px solid var(--color-secondary);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.search-input input:focus {
+    border-color: var(--color-secondary-hover);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(191, 162, 219, 0.2);
+}
+
+.search-input i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-primary);
+}
+
+/* Таблица със записани часове */
+.appointments-table {
+    background: var(--color-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: var(--color-card);
+    color: var(--color-text);
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--color-row-alt);
+}
+
+tbody td {
+    padding: 1rem;
+    color: var(--color-text);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Бутони за действия */
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-confirm {
+    background-color: var(--color-success);
+    color: var(--color-white);
+}
+
+.btn-cancel {
+    background-color: var(--color-error);
+    color: var(--color-white);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Статус бейджове */
+.status-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.status-confirmed {
+    background-color: var(--color-success);
+    color: var(--color-white);
+}
+
+.status-cancelled {
+    background-color: var(--color-error);
+    color: var(--color-white);
+}
+
+.status-pending {
+    background-color: var(--color-warning);
+    color: var(--color-text);
+}
+
+/* Филтри */
+.filter-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-select {
+    padding: 0.8rem;
+    border: 2px solid var(--color-secondary);
+    border-radius: 8px;
+    background-color: var(--color-white);
+    color: var(--color-text);
+}
+
+.filter-select:focus {
+    border-color: var(--color-secondary-hover);
+    outline: none;
+}
